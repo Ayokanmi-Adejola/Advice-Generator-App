@@ -1,0 +1,124 @@
+/* Advice Generator App Styles */
+
+/* Import Google Font - Manrope */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  /* Primary Colors */
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  
+  /* Neutral Colors */
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+  
+  /* Typography */
+  --font-size-quote: 28px;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.advice-container {
+  background-color: var(--dark-grayish-blue);
+  border-radius: 15px;
+  padding: 3rem 2rem 4rem;
+  max-width: 540px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.advice-id {
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.advice-text {
+  color: var(--light-cyan);
+  font-size: var(--font-size-quote);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.divider {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.divider img {
+  width: 100%;
+  height: auto;
+}
+
+.dice-button {
+  background-color: var(--neon-green);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  transform: translateX(-50%);
+  cursor: pointer;
+  border: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.dice-button:hover {
+  box-shadow: 0 0 40px var(--neon-green);
+}
+
+.attribution {
+  margin-top: 5rem;
+  font-size: 11px;
+  text-align: center;
+  color: var(--light-cyan);
+}
+
+.attribution a {
+  color: var(--neon-green);
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .advice-container {
+    padding: 2rem 1.5rem 3.5rem;
+  }
+  
+  .advice-text {
+    font-size: 22px;
+  }
+  
+  .dice-button {
+    width: 56px;
+    height: 56px;
+    bottom: -28px;
+  }
+}
